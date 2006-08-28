@@ -1,0 +1,85 @@
+zmanim
+-------------------------------------------
+Zmanim is a software package that computes zmanim, the times (according 
+to Jewish law) by which an observant Jew must complete specific 
+prayers.
+
+NOTE:
+
+You *must* copy the included sample.zmanrc to $HOME/.zmanrc _AND_ add 
+your local latitude/longitude information for the program to work 
+correctly.
+
+This is provided as a reference only.  Halachic decisions/questions 
+based on this information should be directed to your local orthodox 
+rabbi.
+
+Runtime requirements:
+  cygwin-1.5.21-1
+  tzcode-2005r-2
+
+Build requirements:
+  cygwin-1.5.21-1
+  autoconf2.5-2.59-2
+  automake1.9-1.9.6-1
+  binutils-20060709-1
+  cygport-0.2.5-1
+  gcc-core-3.4.4-1
+  gcc-g++-3.4.4-1
+  make-3.81-1
+  sed-4.1.5-1
+
+Canonical homepage:
+  http://zmanim.sourceforge.net/
+
+Canonical download:
+  http://prdownloads.sourceforge.net/zmanim/
+
+-------------------------------------------
+
+Build instructions:
+  unpack zmanim-1.1.1-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./zmanim-1.1.1-X.cygport all
+
+This will create:
+  /usr/src/zmanim-1.1.1-X-src.tar.bz2
+  /usr/src/zmanim-1.1.1-X.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary package:
+
+  /usr/bin/zmanim.exe
+  /usr/share/doc/Cygwin/zmanim-1.1.1.README
+  /usr/share/doc/zmanim-1.1.1/AUTHORS
+  /usr/share/doc/zmanim-1.1.1/ChangeLog
+  /usr/share/doc/zmanim-1.1.1/COPYING
+  /usr/share/doc/zmanim-1.1.1/INSTALL
+  /usr/share/doc/zmanim-1.1.1/sample.zmanrc
+  /usr/share/man/man1/zmanim.1.gz
+
+------------------
+
+Port Notes:
+
+----- version 1.1.1-1 -----
+Version bump.
+
+----- version 1.0.9-1 -----
+Version bump.
+
+----- version 1.0.8-1 -----
+Fixes a bug with the transition from daylight savings time in some years 
+(i.e. 5765/2004).
+
+----- version 1.0.6-1 -----
+Upstream bugfix release.
+
+----- version 1.0.4-1 -----
+Initial release for Cygwin.
+
+
+Cygwin port maintained by:  http://cygwin-ports.sourceforge.net/
