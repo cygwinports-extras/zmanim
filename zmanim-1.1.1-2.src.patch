@@ -1,30 +1,40 @@
 diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x ltmain.sh -x 'config.*' -x depcomp -x install-sh -x missing -x mkinstalldirs -x autom4te.cache -x '*compile' -x Makefile.in.in -x 'intltool*.in' -x 'xml-i18n-*.in' -x '*.pyc' -x '*.mo' -x '*.gmo' -x ABOUT-NLS -x Makevars.template -x COPYING -x INSTALL -x mdate-sh -x '*.orig' -x '*.rej' -x '*~' -x '*.temp' -x texinfo.tex -x ylwrap -x Makefile.in -x makefile.in -x configure -x gnome-doc-utils.make -x gnome-doc-utils.m4 -x intltool.m4 -x omf.make -x xmldocs.make origsrc/zmanim-1.1.1/main.cpp src/zmanim-1.1.1/main.cpp
 --- origsrc/zmanim-1.1.1/main.cpp	2006-08-26 22:14:10.000000000 -0500
-+++ src/zmanim-1.1.1/main.cpp	2007-03-01 08:14:11.580852800 -0600
-@@ -105,7 +105,7 @@
++++ src/zmanim-1.1.1/main.cpp	2007-03-01 16:34:45.896345400 -0600
+@@ -59,6 +59,9 @@
+ inline void printtime( date time );
+ bool isDST( date thedate );
+ 
++// change this for different tzait_hachochavim shitot
++double tzait_degrees=6.5;
++
+ //prototypes for output functions
+ void oneday_longform ( location_info const & locinfo, date thedate);
+ 
+@@ -105,7 +108,7 @@
           cout << "GRA     Proportional Hour                       " << int( t.ph * 60 ) << " minutes" << endl;
           cout << "                             Candle Lighting    "; printtime( t.candles18); cout << endl;
           cout << "        Shkiah               Sunset         *** "; printtime( t.shkiah ); cout << endl;
 -         cout << "8.5deg  Tzait HaChochavim    Nightfall          "; printtime( t.tzait_hachochavim ); cout << endl;
-+         cout << "6.5deg  Tzait HaChochavim    Nightfall          "; printtime( t.tzait_hachochavim ); cout << endl;
++         cout << tzait_degrees << "deg  Tzait HaChochavim    Nightfall          "; printtime( t.tzait_hachochavim ); cout << endl;
           cout << endl;
        }
  
-@@ -126,7 +126,7 @@
+@@ -126,7 +129,7 @@
           cout << "GRA     Plag Hamincha                           "; printtime( t.plaghamincha); cout << endl;
           cout << "                             Candle Lighting    "; printtime( t.candles18); cout << endl;
           cout << "        Shkiah               Sunset         *** "; printtime( t.shkiah ); cout << endl;
 -         cout << "8.5deg  Tzait HaChochavim    Nightfall          "; printtime( t.tzait_hachochavim ); cout << endl;
-+         cout << "6.5deg  Tzait HaChochavim    Nightfall          "; printtime( t.tzait_hachochavim ); cout << endl;
++         cout << tzait_degrees << "deg  Tzait HaChochavim    Nightfall          "; printtime( t.tzait_hachochavim ); cout << endl;
        }
  
  }
-@@ -291,7 +291,7 @@
+@@ -291,7 +294,7 @@
     result.shkiah_dbl = sunset( thedate, locinfo.lat, locinfo.longi, 90 + .83 );
     result.shkiah = convert_to_tz(thedate,result.shkiah_dbl,locinfo.tzname);
     try{
 -      result.tzait_hachochavim_dbl = sunset( thedate, locinfo.lat, locinfo.longi, 90 + 8.5 );
-+      result.tzait_hachochavim_dbl = sunset( thedate, locinfo.lat, locinfo.longi, 90 + 6.5 );
++      result.tzait_hachochavim_dbl = sunset( thedate, locinfo.lat, locinfo.longi, 90 + tzait_degrees );
        result.tzait_hachochavim = convert_to_tz(thedate,result.tzait_hachochavim_dbl,locinfo.tzname);
     }catch(doesnthappen e){
        result.tzait_hachochavim = thedate;
