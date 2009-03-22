@@ -15,19 +15,20 @@ based on this information should be directed to your local orthodox
 rabbi.
 
 Runtime requirements:
-  cygwin-1.5.21-1
-  tzcode-2005r-2
+  cygwin-1.7.0-45
+  libgcc1-4.3.2-2
+  libstdc++6-4.3.2-2
+  tzcode-2008h-1
 
 Build requirements:
-  cygwin-1.5.21-1
-  autoconf2.5-2.59-2
-  automake1.9-1.9.6-1
-  binutils-20060709-1
-  cygport-0.2.5-1
-  gcc-core-3.4.4-1
-  gcc-g++-3.4.4-1
-  make-3.81-1
-  sed-4.1.5-1
+  autoconf2.5-2.63-10
+  automake1.9-1.9.6-10
+  binutils-20080624-2
+  cygport-0.9.6-1
+  gcc4-core-4.3.2-2
+  gcc4-g++-4.3.2-2
+  make-3.81-2
+  sed-4.1.5-2
 
 Canonical homepage:
   http://zmanim.sourceforge.net/
@@ -53,12 +54,10 @@ This will create:
 Files included in the binary package:
 
   /usr/bin/zmanim.exe
-  /usr/share/doc/Cygwin/zmanim-1.1.1.README
-  /usr/share/doc/zmanim-1.1.1/AUTHORS
-  /usr/share/doc/zmanim-1.1.1/ChangeLog
-  /usr/share/doc/zmanim-1.1.1/COPYING
-  /usr/share/doc/zmanim-1.1.1/INSTALL
-  /usr/share/doc/zmanim-1.1.1/sample.zmanrc
+  /usr/share/doc/zmanim/AUTHORS
+  /usr/share/doc/zmanim/ChangeLog
+  /usr/share/doc/zmanim/COPYING
+  /usr/share/doc/zmanim/sample.zmanrc
   /usr/share/man/man1/zmanim.1.gz
 
 ------------------
@@ -66,20 +65,8 @@ Files included in the binary package:
 Port Notes:
 
 ----- version 1.1.1-1 -----
-Version bump.
-
------ version 1.0.9-1 -----
-Version bump.
-
------ version 1.0.8-1 -----
-Fixes a bug with the transition from daylight savings time in some years 
-(i.e. 5765/2004).
-
------ version 1.0.6-1 -----
-Upstream bugfix release.
-
------ version 1.0.4-1 -----
-Initial release for Cygwin.
+Initial release for Cygwin 1.7.
 
 
-Cygwin port maintained by:  http://cygwin-ports.sourceforge.net/
+Cygwin port maintained by:
+http://sourceware.org/cygwinports/

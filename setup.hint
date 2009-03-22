@@ -1,5 +1,5 @@
-category: Judaism
-requires: cygwin tzcode
+category: Religion
+requires: cygwin libgcc1 libstdc++6 tzcode
 sdesc: "Computes Jewish halachic times"
 ldesc: "Zmanim is a software package that computes zmanim, the times 
 (according to Jewish law) by which an observant Jew must complete 

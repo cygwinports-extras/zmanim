@@ -1,8 +1,0 @@
-DESCRIPTION=
-HOMEPAGE="http://zmanim.sourceforge.net/"
-SRC_URI="mirror://sourceforge/${PN}/${PN}_${PV}.orig.tar.gz"
-
-src_install() {
-	cd ${B}
-	cyginstall docdir=/usr/share/doc/${P}
-}

@@ -1,0 +1,11 @@
+--- origsrc/zmanim-1.1.1/main.cpp	2009-03-22 05:59:03.562500000 -0500
++++ src/zmanim-1.1.1/main.cpp	2009-03-22 06:03:14.984375000 -0500
+@@ -23,7 +23,7 @@
+ #include <fstream>
+ #include <cmath>
+ #include <cstdio>
+-#include <string>
++#include <cstring>
+ #include <cstdlib>
+ #include <cassert>
+ 

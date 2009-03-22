@@ -1,0 +1,5 @@
+DESCRIPTION="Computes Jewish halachic times"
+HOMEPAGE="http://zmanim.sourceforge.net/"
+SRC_URI="mirror://sourceforge/${PN}/${PN}_${PV}.orig.tar.gz"
+PATCH_URI="1.1.1-alter-rebbe.patch
+           1.1.1-gcc43.patch"
