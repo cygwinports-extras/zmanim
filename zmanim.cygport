@@ -1,0 +1,12 @@
+NAME="zmanim"
+VERSION=1.1.1
+RELEASE=10
+CATEGORY="Religion"
+SUMMARY="Computes Jewish halachic times"
+DESCRIPTION="Zmanim is a software package that computes zmanim, the times
+(according to Jewish law) by which an observant Jew must complete specific
+prayers."
+HOMEPAGE="http://zmanim.sourceforge.net/"
+SRC_URI="mirror://sourceforge/${PN}/${PN}_${PV}.orig.tar.gz"
+PATCH_URI="1.1.1-alter-rebbe.patch
+           1.1.1-gcc43.patch"
